@@ -1,0 +1,488 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    background-image: url('tkan-korichnevaya-tekstura3.jpg'); /* Путь к изображению */
+    background-size: cover; /* Растягиваем изображение, чтобы покрыть всю область */
+    /*background-position: center; /* Позиционируем изображение по центру */
+    /*background-repeat: no-repeat; /* Запрещаем повторение изображения */
+}
+/*video vna4ale*/
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+#myVideo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 2s ease;
+}
+
+#content-container {
+    position: relative;
+    z-index: 1;
+    background-color: #f8f8f8;
+    padding-top: 50px; /* Поднимаем контент, чтобы он не перекрывался видео */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: transparent;*/
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+    margin-right: 50px;
+}
+
+nav {
+    display: flex;
+    font-size: 24px;
+
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color:aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Пример красивого шрифта */
+    letter-spacing: 1px; /* Расстояние между буквами */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+nav a:hover {
+    color: #9c6a27; /* Цвет при наведении */
+}
+
+
+/* flag */
+.language-links {
+    display: flex;
+}
+
+.language-link {
+    margin: -190px; /* Расстояние между флагами, настройте под ваши требования */
+    transition: opacity 0.5s ease; /* Плавное изменение прозрачности при клике */
+}
+
+.flashing {
+    animation: flashing 1s infinite alternate; /* Анимация для мигания */
+}
+
+@keyframes flashing {
+    from {
+        opacity: 1; /* Начальная прозрачность */
+    }
+    to {
+        opacity: 0.5; /* Прозрачность при мигании */
+    }
+}
+
+.flag-icon {
+    width: 30px; /* Размер флага, можно настроить под ваши требования */
+    height: auto;
+}
+
+#contact-button {
+    background-color: #9c6a27; /* Светло-коричневый цвет */
+    color: white;
+    padding: 15px 35px; /* Увеличиваем размер кнопки */
+    border: none;
+    border-radius: 8px; /* Закругляем углы */
+    cursor: pointer;
+    margin-right: 50px; /* Уменьшаем отступ справа */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+#contact-button:hover {
+    background-color: #8B4513; /* Изменяем цвет при наведении */
+}
+
+nav a:not(:last-child) {
+    margin-right: 35px;
+}
+
+body.scrolled header {
+    background-color: #604335;
+}
+
+/* Ваш стиль для заголовка и фона */
+#gallery {
+    position: relative;
+    margin-top: 100px; /* Регулируйте значение согласно вашим потребностям */
+}
+
+.background-photo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* белый текст, чтобы соответствовать фото */
+}
+
+.photo-text {
+    font-size: 48px; /* Увеличиваем размер шрифта */
+    font-weight: bold;
+    margin-bottom: 30px; /* Увеличиваем отступ снизу */
+    margin-right: 420px; /* Смещаем влево */
+    margin-top: -300px; /* Поднимаем вверх (отрицательное значение) */
+    color: #ffffff; /* Цвет текста (например, оранжевый) */
+    text-shadow: 2px 2px 4px rgba(185, 103, 26, 0.781); /* Тень текста */
+    text-align: justify; /* Выравниваем текст по ширине */
+}
+
+.text-photo {
+    font-size: 18px; /* Увеличиваем размер шрифта */
+    /*margin-bottom: 30px; /* Увеличиваем отступ снизу */
+    margin-right: 220px; /* Смещаем влево */
+    /*margin-top: -100px; /* Поднимаем вверх (отрицательное значение) */
+    color: #ffffff; /* Цвет текста (например, оранжевый) */
+    text-shadow: 2px 2px 4px rgba(185, 103, 26, 0.781); /* Тень текста */
+    text-align: justify; /* Выравниваем текст по ширине */
+}
+
+
+
+#gallery-button {
+    background-color: #8B4513;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 790px; /* Смещаем влево */
+    
+}
+
+/**/
+.photo-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.photo {
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 15px; /* Отступ от картинки */
+    margin-top: 50px;
+}
+
+.photo-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #D2B48C;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 280px; /* Расстояние между цифрой и заголовком */
+    margin-bottom: -50px;
+    margin-top: 20px;
+}
+
+.photo-text1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    text-align: justify;
+    color:aliceblue;
+}
+
+.photo p {
+    text-align: justify;
+    margin: 10px 0;
+    font-size: 15px;
+   margin-left: 20px;
+   color:aliceblue;
+}
+
+/* Пример использования красивого шрифта (вам нужно подключить этот шрифт к своему проекту) */
+.photo-text1, .photo p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/**/
+/* Ваш стиль для заголовка и фона */
+
+.side-by-side-block {
+    /*margin: 20px;*/
+    background-color: #6043357a;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 500px; /* Высота увеличена, подберите значение по вашему желанию */
+    margin-left: 800px; /*  отступ для смещения влево */
+   
+}
+.side-by-side-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+
+.image-container img {
+    width: 440px;
+    height: 300px;
+    object-fit: cover;
+    position: absolute; /* Добавлено позиционирование */
+    left: 450px; /* Отрицательный отступ для выхода за пределы блока */
+    margin-top: 60px;
+}
+
+.side-by-side-text {
+    margin-bottom: 15px;
+    color: white;
+}
+.side-by-side-text h4 {
+    text-transform: uppercase;
+    margin-left: 30px; /* Левый отступ для заголовка */
+    color: white;
+}
+
+
+.side-by-side-text h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.side-by-side-text p {
+    font-size: 18px;
+    margin-left: 30px; /* Левый отступ для заголовка */
+    color: white;
+}
+
+.vaata-button {
+    background-color: #D2B48C;
+    color: white;
+    padding: 14px 26px; /* Уменьшил отступы кнопки */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: flex-start; /* Размещаем кнопку в начале блока (под текстом) */
+    transition: background-color 0.3s ease;
+}
+
+.vaata-button:hover {
+    background-color: #B08E57;
+}
+
+
+/* Ваш стиль для заголовка и фона */
+
+.centered-block {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.centered-block h2 {
+    font-size: 46px;
+    font-weight: bold;
+    color: #ffffff; /* Коричневый цвет, соответствующий заголовку */
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif; /* Шрифт заголовка */
+    text-transform: uppercase; /* Преобразование текста заголовка в верхний регистр */
+    
+
+}
+
+.centered-block p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Междустрочный интервал для лучшей читаемости */
+    color:aliceblue; /* Цвет текста */
+    font-family: 'Helvetica', sans-serif; /* Шрифт текста */
+}
+
+/**/
+.photo-container1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.photo1 {
+    width: 10%;
+    margin-bottom: 50px;
+}
+
+.photo1 img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.photo-text2 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color:aliceblue;
+}
+
+.small-text1 {
+    font-size: 18px;
+}
+
+/*иконки с текстом */
+#gallery3 {
+    position: relative;
+    margin-top: 100px;
+}
+
+.background-photo3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-photo3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.photo-overlay3 {
+    position: absolute;
+    top: 25%;
+    left: 15%; /* Отступ от левого края на 25% ширины фотографии */
+    width: 30%; /* 50% ширины фотографии */
+    height: 50%; /* 100% высоты фотографии */
+    background-color: rgba(60, 43, 35, 0.541); /* Черный полупрозрачный фон */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Центрируем по обеим осям */
+    padding: 60px;
+    box-sizing: border-box;
+    border-radius: 20px; /* Задаем радиус для полукруглых углов */
+}
+
+.overlay-container {
+    background-color: #8B4513; /* Цвет заднего фона внутри квадрата */
+    padding: 20px;
+    border-radius: 10px; /* Закругленные углы */
+    box-sizing: border-box;
+}
+
+.photo-text3,
+.text-photo3,
+#gallery-button3 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.photo-text3 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-photo3 {
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#gallery-button3 {
+    background-color: #fff;
+    color: #92552a;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#gallery-button3:hover {
+    background-color: #654321;
+}
+
+/* Ваш стиль для заголовка и фона */
+footer {
+    background-color: #f8f8f800; /* Цвет фона футера */
+    padding: 80px 100px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 400px; /* Регулируйте размер логотипа */
+}
+
+.footer-data {
+    text-align: right;
+}
+
+.footer-data p {
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff; /* Цвет текста футера */
+}
+
+footer p:last-child {
+    margin-top: 20px; /* Добавляет отступ между блоками */
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 20px; /* Если нужен отступ сверху */
+    color:aliceblue;
+}
