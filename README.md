@@ -1,1 +1,1 @@
-# IT-code
+# index.php
